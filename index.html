@@ -13,14 +13,30 @@
 </head>
 <body>
     <div class="general-container">
-        <div class="search-container">
-            <input class="js-city-input city-input" type="text">
-            <button class="js-search-button search-button">Search</button>
-        </div>
         <div class="js-weather-form weather-form">
+            <div class="search-container">
+                <input class="js-city-input city-input" type="text">
+                <button class="js-search-button search-button">
+                    <img class="search-image" src="images/search.png" alt="">
+                </button>
+            </div>
+
             <h2 class="city">Kiev</h2>
-            <p class="detailes">clear sky</p>
+
+            <img class="weather-image" src="https://openweathermap.org/img/wn/10d@4x.png" alt="">
+
             <p class="temperature">3.23°C</p>
+
+            <p class="description">clear sky</p>
+            
+            <div class="details-container">
+                <div class="details-block">
+                    <p>Humidity: </p>
+                </div>
+                <div class="details-block">
+                    Wind:
+                </div>
+            </div>
         </div>
     </div>
 

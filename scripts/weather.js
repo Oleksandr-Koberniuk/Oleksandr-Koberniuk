@@ -14,15 +14,28 @@ searchButton.addEventListener('click', () => {
         console.log(data);
 
         document.querySelector('.js-weather-form').innerHTML = `
-            <h2>
-                ${city}
+            <h2 class="city">
+                ${data.name}
             </h2>
-            <p class="details">
-                ${data.weather[0].description}
-            </p>
+
+            <img class="weather-image" src="https://openweathermap.org/img/wn/10d@4x.png" alt="">
+
             <p class="temperature">
                 ${(data.main.temp - 273.15).toFixed(2)}°C
             </p>
+
+            <p class="details">
+                ${data.weather[0].description}
+            </p>
+
+            <div class="details-container">
+                <div class="details-block">
+                    <p>Humidity: ${data.main.humidity}%</p>
+                </div>
+                <div class="details-block">
+                    <p>Wind: ${data.wind.speed}km/h</p
+                </div>
+            </div>
         `;
     }
     getWeather();
