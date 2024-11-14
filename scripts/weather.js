@@ -1,11 +1,11 @@
 const searchButton = document.querySelector('.js-search-button');
 
-searchButton.addEventListener('click', () => {
+function searchWeather() {
     const city = document.querySelector('.js-city-input').value;
     const apiKey = 'de8839c515e63c58374222f2fdefa8c2';
     let imageUrl;
 
-    async function getWeather() {
+    async function getWeatherData() {
         const response = await fetch (`
             https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}
         `)           
@@ -19,10 +19,7 @@ searchButton.addEventListener('click', () => {
             </h2>
             `;
         }
-        
-        //data.weather[0].id = 210;
 
-        console.log(data);
         const weatherId = data.weather[0].id;
         if (weatherId >= 200 && weatherId <= 232) {
             imageUrl = '11d'
@@ -69,5 +66,12 @@ searchButton.addEventListener('click', () => {
             </div>
         `;
     }
-    getWeather();
+    getWeatherData();
+}
+
+document.querySelector('.js-search-button').addEventListener('click', searchWeather);
+document.querySelector('.js-city-input').addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        searchWeather();
+    }
 });
