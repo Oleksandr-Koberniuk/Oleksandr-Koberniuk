@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    background-color: black;
+    font-family: Space Grotesk;
+    color: white;
+    font-size: 1.6rem;
+    height: 2000px;
+}
+
+.header-image-block {
+    background: url('../images/home-background.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.header-image-filter {
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: brightness(60%);
+
+    display: flex;
+    align-items: last baseline;
+}
+
+.welcome-text {
+    color: white;
+    width: 50vw;
+    font-size: 1.6rem;
+    z-index: 100;
+}
+
+.gradient-overlay {
+    width: 100vw;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    z-index: 0;
+}
+
+.padding {
+    padding: 0px 5vw;
+}
+
+.hot-deals-block {
+    margin-top: 100px;   
+}
+
+.hot-deals-container {
+    display: flex;
+    gap: 10px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.hot-deal-product {
+    width: 350px;
+}
+
+.hot-deal-product-image-container {
+    width: 350px;
+    border-radius: 5px;
+    height: 470px;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hot-deal-product-image{
+    width: 65%;
+    transition: all 0.2s;
+}
+
+.hot-deal-product-image-container:hover .hot-deal-product-image {
+    width: 70%;
+}
+
+.hot-deal-product-details {
+    padding: 10px 0px;
+    font-size: 1.1rem;
+    width: 350px;
+    text-wrap: wrap;
+}
+
+.previous-price {
+    color: rgb(246, 109, 109);
+    font-size: 0.8rem;
+}
+
+.hot-deals-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.hot-deals-container::-webkit-scrollbar-thumb {
+    background: rgb(220, 220, 220);
+    border-radius: 5px;
+}
+
+.hot-deals-container::-webkit-scrollbar-track {
+    background-color: rgb(57, 57, 57);
+    border-radius: 5px;
+}
+
+.hot-deals-container::-webkit-scrollbar-button {
+    display: none;
+}
+
+.hot-deals-container::-webkit-scrollbar-thumb:hover {
+    background-color: #999999;
+}
