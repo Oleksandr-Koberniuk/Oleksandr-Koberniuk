@@ -15,7 +15,7 @@
 <body>
     <div class="navigation-bar">
         <div class="c">
-            <a class="project-name" href="main.html">         
+            <a class="project-name" href="index.html">         
                 CoreTech
             </a>
         </div>
@@ -24,22 +24,43 @@
             <a class="link-active" href="home.html">
                 Home
             </a>
-            <a class="link" href="lobby.html">
-                Store
+            <a class="link" href="shop.html">
+                Shop
             </a>
-            <a class="link" href="library.html">
+            <a class="link" href="help.html">
                 Help
             </a>
         </div>
 
+        <div class="menu">
+            <img class="menu-icon js-menu-icon" src="images/header/menu-icon.svg" alt="menu">
+        </div>
+
         <a href="cart.html">
             <div class="cart-header-container">
-                <img src="images/cart-icon.svg" alt="cart" class="cart-image">      
+                <img class="cart-icon" src="images/header/cart-icon.svg" alt="cart">      
             </div>
         </a>
     </div>
-    <div class="header-image-block">
-        <div class="header-image-filter">
+
+    <div class="menu-container js-menu-container">
+        <img class="cross-icon js-cross-icon" src="images/header/cross-icon.svg" alt="Exit">
+
+        <div class="menu-block">
+            <a class="active" href="index.html">
+                Home
+            </a>
+            <a href="shop.html">
+                Shop
+            </a>
+            <a href="help.html">
+                Help
+            </a>
+        </div>
+    </div>
+
+    <div class="welcome-image-block">
+        <div class="welcome-image-filter">
             <div class="gradient-overlay padding">
                 <div class="welcome-text">
                     <p>Welcome to CoreTech!</p>
@@ -48,15 +69,62 @@
             </div>
         </div>  
     </div>
-    <div class="hot-deals-block padding">
-        <p>
-            Hot Deals
-        </p>
 
-        <div class="hot-deals-container js-hot-deals-container">
-                
+    <div class="animation-hot-deals-container">
+        <div class="product-block padding">
+            <p>
+                HOT DEALS
+            </p>
+    
+            <div class="product-container js-hot-deals-container"></div>
         </div>
     </div>
+
+    <div class="animation-trending-container">
+        <div class="product-block padding">
+            <p>
+                TRENDING NOW
+            </p>
+    
+            <div class="product-container js-trending-container"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <div class="footer-text">
+                <p class="footer-title">HAVE A QUESTION?</p>
+    
+                <p>EXPLORE OUR HELP CENTER</p>
+            </div>
+            
+            <a class="view-more-link" href="help.html">
+                VIEW MORE
+            </a>
+        </div>
+
+        <div>
+            <p class="footer-title">SHOP</p>
+
+            <a href="shop.html">ALL PRODUCTS</a>
+        </div>
+
+        <div>
+            <p class="footer-title">CONTACT</p>
+
+            <p>info@coretech.com</p>
+            <p>123-456-7890</p>
+        </div>
+
+        <div>
+            <p class="footer-title"> FOLLOW </p>
+            
+            <p>INSTAGRAM</p>
+            <p>FACEBOOK</p>
+            <p>TIKTOK</p>
+            <p>YOUTUBE</p>
+        </div>
+    </footer>
 
     <script type="module" src="scripts/home.js"></script>
 </body>

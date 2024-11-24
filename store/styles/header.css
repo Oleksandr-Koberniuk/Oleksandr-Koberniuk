@@ -1,7 +1,5 @@
 a {
     text-decoration: none;
-    color: rgb(57, 57, 57);
-    border: 1px solid rgb(240, 240, 240);
 }
   
 .navigation-bar {
@@ -12,12 +10,18 @@ a {
     gap: 3vw;
     background-color: rgb(240, 240, 240);
     border-radius: 30px;
+    opacity: 0.95;
 
     position: fixed;
     left: 5vw;
     right: 5vw;
     top: 15px;
     z-index: 100;
+}
+
+.navigation-bar a {
+    color: rgb(57, 57, 57);
+    border: 1px solid rgb(240, 240, 240);
 }
 
 .project-name {
@@ -46,10 +50,80 @@ a {
     border: 1px solid rgb(57, 57, 57);
 }
 
-.link-active {
+.navigation-bar .link-active {
     border: 2px solid rgb(57, 57, 57);
 }
 
-.cart-image {
+.cart-icon {
     width: 30px;
+}
+
+.menu-icon {
+    width: 30px;
+    display: none;
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    background-color: black;
+    font-size: 2rem;
+
+    display: none;
+}
+
+.menu-container-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.menu-block a{
+    color: rgb(240, 240, 240);
+}
+
+.menu-block .active{
+    color: rgb(140, 78, 255);
+}
+
+.cross-icon {
+    width: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+@media (width <= 750px) {
+    .bar-container {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+@media (width <= 500px) {
+    .project-name {
+        font-size: 1.4rem;
+    }
+
+    .cart-icon {
+        width: 25px;
+    }
+    
+    .menu-icon {
+        width: 20px;
+    }
 }

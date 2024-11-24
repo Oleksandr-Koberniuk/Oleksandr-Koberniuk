@@ -11,6 +11,7 @@ export const products = [
             screenSize: 6.5,
             resolution:	"1080 x 2340"
         },
+        soldQuantity: 23,
         priceCents: 16500,
         discount: false
     }, 
@@ -26,6 +27,7 @@ export const products = [
             screenSize: 6.1,
             resolution:	"2556 x 1179"
         },
+        soldQuantity: 65,
         priceCents: 71560,
         discount: true,
         previousPriceCents: 83000
@@ -42,6 +44,7 @@ export const products = [
             screenSize: 6.12,
             resolution:	"2556 x 1179"
         },
+        soldQuantity: 87,
         priceCents: 95700,
         discount: false
     },
@@ -57,6 +60,7 @@ export const products = [
             screenSize: 6.1,
             resolution:	"2532 × 1170"
         },
+        soldQuantity: 40,
         priceCents: 59800,
         discount: false
     },
@@ -72,6 +76,7 @@ export const products = [
             screenSize: 6.7,
             resolution:	"1344 x 2992"
         },
+        soldQuantity: 53,
         priceCents: 79000,
         discount: true,
         previousPriceCents: 89000
@@ -87,6 +92,7 @@ export const products = [
             connectivityTechnology: "Bluetooth",
             mountingType: "Tabletop"
         },
+        soldQuantity: 68,
         priceCents: 4000,
         discount: true,
         previousPriceCents: 5500
@@ -102,6 +108,7 @@ export const products = [
             connectivityTechnology: "Bluetooth",
             mountingType: "Tabletop"
         },
+        soldQuantity: 15,
         priceCents: 16000,
         discount: false
     },
@@ -118,6 +125,7 @@ export const products = [
             operatingSystem: "Windows 11 Home",
             graphicsCard: "Integrated"
         },
+        soldQuantity: 25,
         priceCents: 44000,
         discount: true,
         previousPriceCents: 66000
@@ -135,6 +143,7 @@ export const products = [
             operatingSystem: "Windows 11 Home",
             graphicsCard: "Integrated"
         },
+        soldQuantity: 23,
         priceCents: 34000,
         discount: false
     },
@@ -151,6 +160,7 @@ export const products = [
             operatingSystem: "Windows 11 Home",
             graphicsCard: "NVIDIA GeForce RTX 3050"
         },
+        soldQuantity: 19,
         priceCents: 96000,
         discount: false
     },
@@ -167,6 +177,7 @@ export const products = [
             operatingSystem: "Windows 11 Home",
             graphicsCard: "Intel Iris Xe Graphics"
         },
+        soldQuantity: 20,
         priceCents: 67000,
         discount: false
     },
@@ -181,6 +192,7 @@ export const products = [
             Connectivity: "Wireless",
             headphoneJack: "3.5 mm Jack"
         },
+        soldQuantity: 30,
         priceCents: 12000,
         discount: false
     },
@@ -195,6 +207,7 @@ export const products = [
             Connectivity: "Wireless",
             headphoneJack: "3.5 mm Jack"
         },
+        soldQuantity: 21,
         priceCents: 30000,
         discount: true,
         previousPriceCents: 45000
@@ -210,6 +223,7 @@ export const products = [
             Connectivity: "Wireless",
             headphoneJack: "USB"
         },
+        soldQuantity: 55,
         priceCents: 6000,
         discount: false
     },
@@ -224,13 +238,14 @@ export const products = [
             Connectivity: "Wireless",
             headphoneJack: "None"
         },
+        soldQuantity: 36,
         priceCents: 3000,
         discount: false
     },
     {
         id: "mqn31-63kn-2mh4",
         name: "HONOR X6b Mobile Phone Unlocked",
-        brand: "HONOR",
+        brand: "Honor",
         categoryCharacteristics: {
             category: "phone",
             operatingSystem: "Android 13.0",
@@ -239,6 +254,7 @@ export const products = [
             screenSize: 6.56,
             resolution:	"1080 x 2400"
         },
+        soldQuantity: 39,
         priceCents: 9800,
         discount: true,
         previousPriceCents: 16000
