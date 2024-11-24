@@ -1,11 +1,13 @@
 :root {
-    --product-width: 320px;
-    --product-height: 430px;
+    --product-width: 18vw;
+    --product-height: 22vw;
 }
 
 body {
     background-color: black;
-    padding-top: 200px;
+    padding-top: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .general-container {
@@ -88,4 +90,40 @@ body {
 
 .product-box.hide {
     display: none;
+}
+
+.sort-wrapper {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 50px;
+    padding-right: 70px;
+}
+
+.sort-container {
+    position: relative;
+}
+
+.sort {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+    width: 200px;
+    margin-left: 20px;
+}
+
+.sort-container::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 10px; 
+    transform: translateY(-50%);
+    color: #fff; 
 }

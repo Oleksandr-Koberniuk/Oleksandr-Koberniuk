@@ -92,6 +92,44 @@ products.forEach((product) => {
     generateProducts(product);
 });
 
+function sortProducts(criteria) {
+    let sortedProducts;
+
+    switch (criteria) {
+        case "price-asc":
+            sortedProducts = [...products].sort((a, b) => a.priceCents - b.priceCents);
+            break;
+        case "price-desc":
+            sortedProducts = [...products].sort((a, b) => b.priceCents - a.priceCents);
+            break;
+        case "name-asc":
+            sortedProducts = [...products].sort((a, b) => a.name.localeCompare(b.name));
+            break;
+        case "name-desc":
+            sortedProducts = [...products].sort((a, b) => b.name.localeCompare(a.name));
+            break;
+        case "popularity-desc":
+            sortedProducts = [...products].sort((a, b) => b.soldQuantity - a.soldQuantity);
+            break;
+        default:
+            sortedProducts = products;
+    }
+
+    renderProducts(sortedProducts);
+}
+
+function renderProducts(productsToRender) {
+    const productsContainer = document.querySelector('.js-products-container');
+    productsHTML = ''; // Clear the previous products
+    productsToRender.forEach(product => generateProducts(product));
+    productsContainer.innerHTML = productsHTML;
+}
+
+// Listen for changes in the sort dropdown
+document.querySelector('.js-sort-dropdown').addEventListener('change', (event) => {
+    sortProducts(event.target.value);
+});
+
 document.querySelector('.js-min-price').addEventListener('input', applyFilters);
 
 document.querySelector('.js-max-price').addEventListener('input', applyFilters);
