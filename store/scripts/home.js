@@ -68,8 +68,6 @@ products.forEach((product) => {
 document.querySelector('.js-hot-deals-container').innerHTML = hotDealsHTML;
 document.querySelector('.js-trending-container').innerHTML = trendingHTML;
 
-
-
 document.querySelector('.js-menu-icon').addEventListener('click', () => {
     document.querySelector('.js-menu-container').classList.add('menu-container-active');
 });

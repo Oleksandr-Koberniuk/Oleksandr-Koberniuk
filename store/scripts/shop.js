@@ -120,12 +120,11 @@ function sortProducts(criteria) {
 
 function renderProducts(productsToRender) {
     const productsContainer = document.querySelector('.js-products-container');
-    productsHTML = ''; // Clear the previous products
+    productsHTML = ''; 
     productsToRender.forEach(product => generateProducts(product));
     productsContainer.innerHTML = productsHTML;
 }
 
-// Listen for changes in the sort dropdown
 document.querySelector('.js-sort-dropdown').addEventListener('change', (event) => {
     sortProducts(event.target.value);
 });

@@ -104,7 +104,7 @@ a {
     right: 20px;
 }
 
-@media (width <= 750px) {
+@media (width <= 850px) {
     .bar-container {
         display: none;
     }

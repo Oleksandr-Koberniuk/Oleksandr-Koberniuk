@@ -3,16 +3,21 @@
     --product-height: 22vw;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: black;
     padding-top: 150px;
-    padding-left: 50px;
-    padding-right: 50px;
+    font-size: 1.2rem;
 }
 
 .general-container {
+    width: 90%;
     display: flex;
     gap: 50px;
+    margin-inline: auto;
 }
 
 .products-container {
@@ -110,10 +115,10 @@ body {
 
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #ffffff;
+    border: 1px solid white;
     border-radius: 5px;
     background-color: #000000;
-    color: #fff;
+    color: white;
     cursor: pointer;
     width: 200px;
     margin-left: 20px;
@@ -125,5 +130,9 @@ body {
     top: 50%;
     right: 10px; 
     transform: translateY(-50%);
-    color: #fff; 
+    color: white; 
+}
+
+input[type="checkbox"] {
+    accent-color: rgb(140, 78, 255);
 }
