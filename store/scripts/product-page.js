@@ -1,5 +1,6 @@
 import { products } from "../data/products.js";
 import { formatCurrency } from "./money.js"
+import { addToCart } from "./cart.js";
 
 let product;
 
@@ -41,7 +42,8 @@ document.querySelector('.js-details-container').innerHTML = `
     <p>INFO</p>
     <div class="info-container js-info-container"></div>
 
-    <button class="add-to-cart-button">Add To Cart</button>
+    <span>Quantity: </span> <input type="number" class="quantity-input js-quantity-input" value="1">
+    <button class="add-to-cart-button js-add-to-cart-button">Add To Cart</button>
 `;
 
 if (product.discount) {
@@ -133,6 +135,11 @@ if (product.categoryCharacteristics.category === 'phone') {
     `;
 }
 
+document.querySelector('.js-add-to-cart-button').addEventListener('click', () => {
+    let quantity = Number(document.querySelector('.js-quantity-input').value);
+    
+    addToCart(productId, quantity);
+});
 
 document.querySelectorAll('.js-sidebar-image-container').forEach((element) => {
     element.classList.remove('active-image');

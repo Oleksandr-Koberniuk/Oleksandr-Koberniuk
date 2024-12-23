@@ -3,7 +3,7 @@ footer {
     margin-top: 150px;
     background-color: rgb(140, 78, 255);
     padding: 30px;
-
+    
     display: flex;
     justify-content: space-evenly;
 }

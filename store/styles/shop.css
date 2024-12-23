@@ -1,6 +1,6 @@
 :root {
-    --product-width: 18vw;
-    --product-height: 22vw;
+    --product-width: 220px;
+    --product-height: 270px;
 }
 
 html, body {
@@ -21,9 +21,10 @@ body {
 }
 
 .products-container {
+    width: 100%;
     display: grid;
     gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .products-container a {
@@ -99,13 +100,10 @@ body {
 
 .sort-wrapper {
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     margin-bottom: 50px;
-    padding-right: 70px;
-}
-
-.sort-container {
-    position: relative;
+    width: 90%;
+    margin-inline: auto;
 }
 
 .sort {
@@ -126,13 +124,25 @@ body {
 
 .sort-container::after {
     content: '▼';
-    position: absolute;
-    top: 50%;
-    right: 10px; 
+    position: relative;
+    right: 40px; 
     transform: translateY(-50%);
     color: white; 
 }
 
+.a {
+    visibility: hidden;
+}
+
 input[type="checkbox"] {
     accent-color: rgb(140, 78, 255);
+}
+
+@media (width <= 1070px) {
+    .filters-container {
+        display: none;
+    }
+    .a {
+        visibility: visible;
+    }
 }
