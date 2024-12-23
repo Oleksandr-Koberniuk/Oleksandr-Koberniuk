@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-    padding-top: 150px;
+    padding-top: 120px;
     font-size: 1.2rem;
 }
 
@@ -98,9 +98,10 @@ body {
     display: none;
 }
 
-.sort-wrapper {
+.sort-filters-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 50px;
     width: 90%;
     margin-inline: auto;
@@ -130,19 +131,64 @@ body {
     color: white; 
 }
 
-.a {
+.filters-menu-button {
+    border: 1px solid white;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
     visibility: hidden;
+    transition: all 0.2s;
+}
+
+.filters-menu-button:hover {
+    color: black;
+    background-color: white;
+}
+
+.filters-menu-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 100;
+
+    display: none;
+}
+
+.filters-menu {
+    font-size: 1rem;
+}
+
+.brand-category-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.price-filter-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filters-menu-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 input[type="checkbox"] {
     accent-color: rgb(140, 78, 255);
+    cursor: pointer;
 }
 
 @media (width <= 1070px) {
     .filters-container {
         display: none;
     }
-    .a {
+
+    .filters-menu-button {
         visibility: visible;
     }
 }

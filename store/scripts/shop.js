@@ -146,3 +146,12 @@ document.querySelector('.js-menu-icon').addEventListener('click', () => {
 document.querySelector('.js-cross-icon').addEventListener('click', () => {
     document.querySelector('.js-menu-container').classList.remove('menu-container-active');
 });
+
+document.querySelector('.js-filters-menu-button').addEventListener('click', () => {
+    document.querySelector('.js-filters-menu-container').classList.add('filters-menu-active');
+    console.log(document.querySelector('.js-filters-menu-container').classList);
+});
+
+document.querySelector('.js-cross-icon-filters').addEventListener('click', () => {
+    document.querySelector('.js-filters-menu-container').classList.remove('filters-menu-active');
+});
