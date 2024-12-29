@@ -83,7 +83,7 @@ export const products = [
     },
     {
         id: "nj32f-43nj-jd5v",
-        name: "Bluetooth Speaker, Anker Soundcore Upgraded Version with 24H Playtime",
+        name: "Bluetooth Speaker Anker Soundcore",
         brand: "Anker",
         categoryCharacteristics: {
             category: "speaker",
@@ -183,7 +183,7 @@ export const products = [
     },
     {
         id: "mk3jb-ekwq-32o1",
-        name: "Sony WH-CH720N Noise Cancelling Wireless Bluetooth Headphones",
+        name: "Sony WH-CH720N Noise Cancelling Headphones",
         brand: "Sony",
         categoryCharacteristics: {
             category: "headphones",
@@ -198,7 +198,7 @@ export const products = [
     },
     {
         id: "kew3l-o2i2-kdl1",
-        name: "Sony WH-1000XM5 Noise Cancelling Wireless Over-Ear Headphones",
+        name: "Sony WH-1000XM5 Headphones",
         brand: "Sony",
         categoryCharacteristics: {
             category: "headphones",

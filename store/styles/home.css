@@ -150,15 +150,6 @@ body {
     }
 }
 
-@media (width <= 850px) {
-    footer {     
-        display: grid;
-        justify-content: space-evenly;
-        grid-template-columns: 200px 200px;
-        gap: 60px;
-    }
-}
-
 @media (width <= 700px) {
     :root {
         --product-width: 200px;
@@ -191,12 +182,5 @@ body {
 
     .product-block {
         margin-top: 100px;   
-    }
-
-    footer {
-        display: grid;
-        justify-content: left;
-        grid-template-columns: 200px;
-        gap: 60px;
-    }
+    } 
 }

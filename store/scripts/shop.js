@@ -16,8 +16,8 @@ function generateProducts(product) {
                         <p>
                             ${product.name}
                         </p>
-                        <p>
-                            &euro;${formatCurrency(product.priceCents)} <sup class="previous-price">Was &euro;${formatCurrency(product.previousPriceCents)}</sup>
+                        <p class="discounted-price">
+                            <span>&euro;${formatCurrency(product.priceCents)}</span> <span><sup class="previous-price">Was &euro;${formatCurrency(product.previousPriceCents)}</sup></span>
                         </p>
                     </div>
                 </a>
@@ -116,6 +116,7 @@ function sortProducts(criteria) {
     }
 
     renderProducts(sortedProducts);
+    applyFilters();
 }
 
 function renderProducts(productsToRender) {

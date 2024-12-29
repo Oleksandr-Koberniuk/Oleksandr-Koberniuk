@@ -5,20 +5,19 @@ export let cart = JSON.parse(localStorage.getItem('cart')) || [];
 export function addToCart(productId, quantity) {
     let cartProduct;
     let isProductIntoCart = false;
-    console.log("ds");
     
     cart.forEach((product) => {
         if (product.id === productId) {
-            product.quantity += quantity;
+            product.quantity += Number(quantity);
             isProductIntoCart = true;
+            console.log(product);
         }
     });
-    
     if (!isProductIntoCart) { 
         products.forEach((product) => {
             if (product.id === productId) {
                 cartProduct = product;
-                cartProduct.quantity = quantity;
+                cartProduct.quantity = Number(quantity);
                 cart.push(cartProduct);
             }
         }); 

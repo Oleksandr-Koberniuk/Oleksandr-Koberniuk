@@ -6,6 +6,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -120,7 +121,7 @@ body {
     color: white;
     cursor: pointer;
     width: 200px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .sort-container::after {
@@ -133,7 +134,7 @@ body {
 
 .filters-menu-button {
     border: 1px solid white;
-    padding: 0.5rem 2rem;
+    padding: 10px 30px;
     cursor: pointer;
     visibility: hidden;
     transition: all 0.2s;
@@ -190,5 +191,81 @@ input[type="checkbox"] {
 
     .filters-menu-button {
         visibility: visible;
+    }
+}
+
+@media (width <= 500px) {
+    :root {
+        --product-width: 170px;
+        --product-height: 210px;
+    }
+
+    .product-box {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .product-details {
+        padding-right: 20px;
+        width: 100%;
+    }
+
+    .sort-filters-wrapper {
+        font-size: 1.1rem;
+        gap: 20px;
+        width: 90%;
+        padding-left: 5%; 
+    }
+
+    .filters-menu-button {
+        padding: 7px 20px;
+    }
+
+    .sort-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sort-container::after {
+        right: 30px; 
+        transform: translateY(0%);
+    }
+
+    .sort {
+        width: 120px;
+    }
+}
+
+@media (width <= 380px) {
+    :root {
+        --product-width: 120px;
+        --product-height: 180px;
+    }
+
+    .product-box {
+        display: flex;
+        width: 90%;
+    }
+
+    .product-details {
+        padding-right: 20px;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .sort {
+        width: 100px;
+    }
+
+    .sort-filters-wrapper {
+        width: 95%;
+        gap: 0px;
+    }
+
+    .discounted-price {
+        display: flex;
+        flex-direction: column;
     }
 }

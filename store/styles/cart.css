@@ -8,22 +8,33 @@ body {
     font-size: 1.4rem;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .cart-container {
-    min-height: 330px;
     width: 85%;
     margin-inline: auto;
 }
 
+.empty-cart {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 110px;
+}
+
 .product-container {
     display: flex;
-    gap: 20px;
+    gap: 2rem;
     margin-bottom: 10px;
 }
 
 .image-and-details-container {
-    display: flex;
-    gap: 50px;
-    width: 50%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 5rem;
+    width: 80%;
 }
 
 .quantity-and-delete-container {
@@ -31,7 +42,7 @@ body {
     justify-content: right;
     align-items: start;
 
-    width: 45%;
+    width: 15%;
     padding-top: 30px;
     padding-right: 20px;
 }
@@ -40,6 +51,7 @@ body {
     padding: 20px;
     background-color: white;
     width: 150px;
+    height: 150px;
 
     display: flex;
     align-items: center;
@@ -70,4 +82,100 @@ body {
 .delete-button {
     width: 30px;
     cursor: pointer;
+}
+
+.cart-summary-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 85%;
+    margin-top: 70px;
+    margin-inline: auto;
+}
+
+.cart-summary-heading{
+    text-align: center;
+    margin: 0;
+}
+
+hr {
+    width: 100%;
+    margin: 0;
+}
+
+.cart-summary-first-sub-container {
+    margin-top: 40px;
+}
+
+.checkout-button {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    font-size: 1.4rem;
+    padding: 15px 10px;
+    width: 100%;
+    margin-top: 40px;
+    transition: all 0.2s;
+}
+
+.checkout-button:hover {
+    background-color: rgb(140, 78, 255);
+    border: 1px solid rgb(140, 78, 255);
+}
+
+.checkout-container {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 100;
+}
+
+.checkout-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.checkout-heading {
+    font-size: 1.8rem;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.5rem;
+}
+
+.checkout-form-input-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.submit-button {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    font-size: 1.3rem;
+    padding: 15px 10px;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.submit-button:hover {
+    background-color: rgb(140, 78, 255);
+    border: 1px solid rgb(140, 78, 255);
+}
+
+.active-checkout {
+    display: block;
 }
