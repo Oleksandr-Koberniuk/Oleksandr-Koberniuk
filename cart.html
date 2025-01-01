@@ -94,65 +94,72 @@
         <div class="checkout-form-container">
             <p class="checkout-heading">CHECKOUT</p>
 
-            <form class="checkout-form">
+            <form class="js-checkout-form checkout-form">
                 <div class="checkout-form-input-container">
                     <label for="name">Name</label>
-                    <input type="text" name="name" required>
+                    <input type="text" name="name">
                 </div>
 
                 <div class="checkout-form-input-container">
                     <label for="email">Email</label>
-                    <input type="email" name="email" required>
+                    <input type="email" name="email">
                 </div>
 
                 <div class="checkout-form-input-container">
                     <label for="address">Address</label>
-                    <input type="text" name="address" required>
+                    <input type="text" name="address">
                 </div>
 
                 <div class="checkout-form-input-container">
                     <label for="city">City</label>
-                    <input type="text" name="city" required>
+                    <input type="text" name="city">
                 </div>
 
                 <div class="checkout-form-input-container">
                     <label for="zip">Eircode</label>
-                    <input type="text" name="zip" required>
+                    <input type="text" name="zip">
                 </div>
 
                 <div class="checkout-form-input-container">
                     <label for="country">Country</label>
-                    <input type="text" name="country" required>
+                    <input type="text" name="country">
                 </div>
 
                 <div class="checkout-form-input-container">
                     <label for="phone">Phone</label>
-                    <input type="tel" name="phone" required>
+                    <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
                 </div>
 
                 <div class="checkout-form-input-container">
                     <label for="card">Card Number</label>
-                    <input type="text" name="card" required>                  
+                    <input type="text" name="card">                  
                 </div>
 
                 <div class="checkout-form-input-container">
                     <label for="expiry">Expiry</label>
-                    <input type="text" name="expiry" required>
+                    <input type="text" name="expiry">
                 </div>
 
                 <div class="checkout-form-input-container">
                     <label for="cvv">CVV</label>
-                    <input type="text" name="cvv" required>
+                    <input type="text" name="cvv">
                 </div>
 
                 <div class="checkout-form-input-container">
                     <label for="card-holder">Card Holder</label>
-                    <input type="text" name="card-holder" required>
+                    <input type="text" name="card-holder">
                 </div>
 
-                <button class="submit-button js-submit-button">SUBMIT</button>
+                <input type="submit" value="PAY" class="submit-button js-submit-button">
             </form>
         </div>
+    </div>
+    
+    <div class="checkout-finished js-checkout-finished">
+        <p>Thank you for your purchase!</p>
+        <p>We will send you a confirmation email shortly.</p>
+
+        <img class="close-checkout-message js-close-checkout-message" src="images/header/cross-icon.svg" alt="Close">
     </div>
 
     <footer>

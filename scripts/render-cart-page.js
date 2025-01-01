@@ -1,4 +1,4 @@
-import { cart, removeFromCart } from "./cart.js";
+import { cart, removeFromCart, clearCart } from "./cart.js";
 import { formatCurrency } from "./money.js"
 
 function renderCartContent() {
@@ -8,22 +8,20 @@ function renderCartContent() {
         if (product.discount) {
             cartHTML += `
             <div class="product-container">
-                <div class="image-and-details-container">
+                <div class="image-container">
                     <a href="product-page.html?productId=${product.id}">
                         <div class="product-image-container">
                             <img src="images/products/${product.id}/main-photo.jpg" class="product-image">
                         </div>
                     </a>
-
-                    <div class="details-container">
-                        <a href="product-page.html?productId=${product.id}">
-                            <p>${product.name}</h2>
-                            <p>&euro;${formatCurrency(product.priceCents)} <sup class="previous-price">Was &euro;${formatCurrency(product.previousPriceCents)}</sup></p>
-                        </a>
-                    </div>
                 </div>
-    
-                <div class="quantity-and-delete-container">
+
+                <div class="details-container">
+                    <a class="a" href="product-page.html?productId=${product.id}">
+                        <p>${product.name}</h2>
+                        <p>&euro;${formatCurrency(product.priceCents)} <sup class="previous-price">Was &euro;${formatCurrency(product.previousPriceCents)}</sup></p>
+                    </a>
+                
                     <div class="quantity-and-delete-wrapper">
                         <input type="number" data-id="${product.id}" class="js-quantity-input quantity-input" value="${product.quantity}">
                         <img src="images/cart-page/delete.svg" data-id="${product.id}" class="js-delete-button delete-button">
@@ -34,22 +32,20 @@ function renderCartContent() {
         } else {
             cartHTML += `
             <div class="product-container">
-                <div class="image-and-details-container">
+                <div class="image-container">
                     <a href="product-page.html?productId=${product.id}">
                         <div class="product-image-container">
                             <img src="images/products/${product.id}/main-photo.jpg" class="product-image">
                         </div>
                     </a>
-   
-                    <div class="details-container">
-                        <a href="product-page.html?productId=${product.id}">
-                            <p>${product.name}</h2>
-                            <p>&euro;${formatCurrency(product.priceCents)}</p>
-                        </a>
-                    </div>
                 </div>
+
+                <div class="details-container">
+                    <a class="a" href="product-page.html?productId=${product.id}">
+                        <p>${product.name}</h2>
+                        <p>&euro;${formatCurrency(product.priceCents)}</p>
+                    </a>
     
-                <div class="quantity-and-delete-container">
                     <div class="quantity-and-delete-wrapper">
                         <input type="number" data-id="${product.id}" class="js-quantity-input quantity-input" value="${product.quantity}">
                         <img src="images/cart-page/delete.svg" data-id="${product.id}" class="js-delete-button delete-button">
@@ -104,6 +100,15 @@ function renderCartSummary() {
 renderCartContent();
 renderCartSummary();
 
+if (JSON.parse(localStorage.getItem('payed'))) {
+    document.querySelector('.js-checkout-finished').style.display = 'block';
+    localStorage.setItem('payed', JSON.stringify(false));
+}
+
+document.querySelector('.js-close-checkout-message').addEventListener('click', () => {
+    document.querySelector('.js-checkout-finished').style.display = 'none';
+});
+
 document.querySelectorAll('.js-quantity-input').forEach((element) => {
     let id = element.dataset.id;
 
@@ -123,6 +128,13 @@ document.querySelectorAll('.js-quantity-input').forEach((element) => {
     });
 });
 
+document.querySelector('.js-menu-icon').addEventListener('click', () => {
+    document.querySelector('.js-menu-container').classList.add('menu-container-active');
+});
+document.querySelector('.js-cross-icon').addEventListener('click', () => {
+    document.querySelector('.js-menu-container').classList.remove('menu-container-active');
+});
+
 document.querySelector('.js-checkout-button').addEventListener('click', () => {
     document.querySelector('.js-checkout-container').classList.add('active-checkout');
 });
@@ -130,13 +142,9 @@ document.querySelector('.js-checkout-cross-icon').addEventListener('click', () =
     document.querySelector('.js-checkout-container').classList.remove('active-checkout');
 });
 
-document.querySelector('.js-submit-button').addEventListener('click', () => {
-    cart = [];
-    localStorage.setItem('cart', JSON.stringify(cart));
-    console.log(localStorage.getItem('cart'));
+document.querySelector('.js-checkout-form').addEventListener('submit', () => {
+    clearCart();
+    renderCartContent();
     
-
-    setTimeout(() => {
-        document.querySelector('.js-checkout-container').classList.remove('active-checkout');
-    }, 3000);
+    localStorage.setItem('payed', JSON.stringify(true));
 });

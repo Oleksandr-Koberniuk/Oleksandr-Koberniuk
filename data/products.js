@@ -229,7 +229,7 @@ export const products = [
     },
     {
         id: "fds32-o1kp-kmn7",
-        name: "Wireless Earbuds, Bluetooth 5.3 Headphones In Ear",
+        name: "WeurGhy Wireless Earbuds",
         brand: "WeurGhy",
         categoryCharacteristics: {
             category: "headphones",

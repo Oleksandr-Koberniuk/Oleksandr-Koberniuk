@@ -34,17 +34,19 @@ document.querySelector('.js-product-image-container').innerHTML = `
 `;
 
 document.querySelector('.js-details-container').innerHTML = `
-    <p>
+    <p class="product-name">
         ${product.name}
     </p>
     <p class="js-price"></p>
     <hr>
-    <p>INFO</p>
+    <p class="info-text">INFO</p>
     <div class="info-container js-info-container"></div>
 
     <span>Quantity: </span> <input type="number" class="quantity-input js-quantity-input" value="1">
     <button class="add-to-cart-button js-add-to-cart-button">Add To Cart</button>
 `;
+
+document.querySelector('.js-product-name-mobile').textContent = product.name;
 
 if (product.discount) {
     document.querySelector('.js-price').innerHTML = `

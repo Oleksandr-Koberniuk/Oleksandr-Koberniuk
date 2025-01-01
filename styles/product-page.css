@@ -8,6 +8,10 @@ body {
     font-size: 1.4rem;
 }
 
+.product-name-mobile {
+    display: none;
+}
+
 .product-main-container {
     width: 85%;
     margin-inline: auto;
@@ -19,24 +23,23 @@ body {
 .product-image-container{
     width: 50%;
     padding: 50px 0;
-
     display: flex;
 }
 
 .image-display-container {
-    min-width: 400px;
-    min-height: 40vh;
-    max-height: 90vh;
+    min-width: 60%;
+    max-width: 80%;
+    max-height: 80%;
     background-color: white;
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .product-image {
-    max-width: 80%;
-    max-height: 90%;
+    max-width: 75%;
+    max-height: 85%;
 }
 
 .product-images-sidebar {
@@ -110,4 +113,101 @@ hr {
 .add-to-cart-button:hover {
     background-color: rgb(140, 78, 255);
     border: 1px solid rgb(140, 78, 255);
+}
+
+@media (width <= 1000px) {
+    .product-name {
+        display: none;
+    }
+
+    .product-name-mobile {
+        display: block;
+        font-size: 2rem;
+        margin-bottom: -10px;
+    }
+
+    .product-main-container {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .product-image-container{
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    .details-container {
+        width: 100%;
+    }
+}
+
+@media (width <= 650px) {
+    .product-name-mobile {
+        font-size: 1.7rem;
+    }
+
+    .image-display-container {
+        width: 80%;
+        max-height: 70vh;
+    }
+    
+    .sidebar-image-container {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .sidebar-image {
+        max-width: 80px;
+        max-height: 80px;
+    } 
+}
+
+@media (width <= 500px) {
+    .product-name-mobile {
+        font-size: 1.5rem;
+    }
+
+    .info-container {
+        font-size: 1.2rem;
+        gap: 20px 30px;
+    }
+
+    .sidebar-image-container {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .sidebar-image {
+        max-width: 60px;
+        max-height: 60px;
+    } 
+}
+
+@media (width <= 410px) {
+    .product-name-mobile {
+        font-size: 1.5rem;
+    }
+
+    .info-container {
+        font-size: 1.1rem;
+        gap: 20px 30px;
+    }
+
+    .image-display-container {
+        max-height: 50vh;
+    }
+
+    .product-image-container{
+        width: 100%;
+    }
+
+    .sidebar-image-container {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .sidebar-image {
+        max-width: 45px;
+        max-height: 45px;
+    } 
 }

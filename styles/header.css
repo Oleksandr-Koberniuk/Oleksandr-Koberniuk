@@ -116,7 +116,7 @@ a {
 
 @media (width <= 500px) {
     .project-name {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .cart-icon {
